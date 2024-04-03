@@ -10,7 +10,8 @@
 import random
 
 class Character:
-    def __init__(self)-> None:
+    def __init__(self, races)-> None:
+        self.races = races
         self._type_strenght = {
             'Incorpóreo':[0],
             'Incapaz':[1,2,3,4,5],

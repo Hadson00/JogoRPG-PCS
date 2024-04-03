@@ -24,11 +24,11 @@ while True:
                 races = ['Anão da colina", "Anão da montanha","Anão']
                 match player_race:
                     case 0 :
-                        player_character = HillDwarf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = HillDwarf(races[player_race])
                     case 1 : 
-                        player_character = MountainDwarf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = MountainDwarf(races[player_race])
                     case 2 :
-                        player_character = Dwarf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Dwarf(races[player_race])
                             
             case 1: 
                 print('_________Escolher Sub-Raça_________')
@@ -36,13 +36,13 @@ while True:
                 races = ['Elfo Alto', 'Elfo da floresta','Elfo negro', 'Elfo']
                 match player_race:
                     case 0 :
-                        player_character = HighElf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = HighElf(races[player_race])
                     case 1 : 
-                        player_character = WoodElf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = WoodElf(races[player_race])
                     case 2 :
-                        player_character = DarkElf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = DarkElf(races[player_race])
                     case 3 :
-                        player_character = Elf(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Elf(races[player_race])
 
             case 2: 
                 print('_________Escolher Sub-Raça_________')
@@ -50,17 +50,17 @@ while True:
                 races = ['Bárbaro Veloz', 'Bárbaro Robusto','Bárbaro']
                 match player_race:
                     case 0 :
-                        player_character = Lightfoot(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Lightfoot(races[player_race])
                     case 1 : 
-                        player_character = Stout(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Stout(races[player_race])
                     case 2 :
-                        player_character = Barbarian(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Barbarian(races[player_race])
 
             case 3: 
-                player_character = Human(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                player_character = Human(races[player_race])
                 
             case 4: 
-                player_character = Dragonborn(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                player_character = Dragonborn(races[player_race])
                 
             case 5: 
                 print('_________Escolher Sub-Raça_________')
@@ -68,16 +68,16 @@ while True:
                 races = ['Gnomo da floresta', 'Gnomo da pedra','Gnomo']
                 match player_race:
                     case 0 :
-                        player_character = ForestGnome(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = ForestGnome(races[player_race])
                     case 1 : 
-                        player_character = RockGnome(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = RockGnome(races[player_race])
                     case 2 :
-                        player_character = Gnome(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                        player_character = Gnome(races[player_race])
                 
             case 6: 
-                player_character = Tiefling(player_name, 0, 0, 0, 0, 0, 0, 0, races[player_race])
+                player_character = Tiefling(races[player_race])
 
-        #player_character.create_random_weight()    
+        #player_character.create_random_weight()
         print(player_character)
 
     elif x == 2:

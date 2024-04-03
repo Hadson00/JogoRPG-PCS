@@ -1,8 +1,8 @@
 from character import Character
 
 class Tiefling(Character):
-    def __init__(self)-> None:
-        super().__init__()
+    def __init__(self, races)-> None:
+        super().__init__(races)
     
     def addAtribute(self):
         self._intelligence += 1

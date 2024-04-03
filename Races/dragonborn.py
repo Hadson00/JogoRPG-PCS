@@ -1,8 +1,8 @@
 from character import Character
 
 class Dragonborn(Character):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, races):
+        super().__init__(races)
     
     def addAtribute(self):
         self._strenght += 2

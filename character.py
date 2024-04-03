@@ -66,7 +66,7 @@ class Character:
             'Ídolo':[21]
         }
         self._strenght = random.randint(0,21)
-        self._dexterity = 0
+        self._dexterity = random.randint(0,21)
         self._constitution = random.randint(0,21)
         self._wisdom = random.randint(0,21)
         self._intelligence = random.randint(0,21)
@@ -96,7 +96,6 @@ class Character:
     def typeCharisma(self):
         return self.__calcAtribute(self._charisma, self._type_charisma)
     
-b = Character()
+#b = Character()
 
-print(b._charisma)
-print(b.typeCharisma())
+#print(b.typeCharisma())

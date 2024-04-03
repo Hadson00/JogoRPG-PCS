@@ -1,9 +1,10 @@
-from character import *
+from character import Character
 
 class Dragonborn(Character):
     def __init__(self):
         super().__init__()
     
     def addAtribute(self):
-        self._strenght + 2
-        self._charisma + 1
+        self._strenght += 2
+        self._charisma += 1
+        return self._strenght, self._charisma

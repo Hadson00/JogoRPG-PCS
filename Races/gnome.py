@@ -1,22 +1,25 @@
-from character import *
+from character import Character
 
 class Gnome(Character):
     def __init__(self)-> None:
         super().__init__()
     
     def addAtribute(self):
-        self._intelligence + 2
+        self._intelligence += 2
+        return self._intelligence
 
 class ForestGnome(Gnome):
     def __init__(self)-> None:
         super().__init__()
     
     def addAtribute(self):
-        self._dexterity + 1
+        self._dexterity += 1
+        return self._dexterity
 
-class RockElf(Gnome):
+class RockGnome(Gnome):
     def __init__(self)-> None:
         super().__init__()
     
     def addAtribute(self):
-        self._constitution + 1
+        self._constitution += 1
+        return self._constitution

@@ -1,25 +1,20 @@
+import os
+import sys
+diretorio_raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(diretorio_raiz)
 from character import Character
 
 class Barbarian(Character):
-    def __init__(self, races):
-        super().__init__(races)
-    
-    def addAtribute(self):
+    def __init__(self, player_name: None, races: None)-> None:
+        super().__init__(player_name, races)
         self._dexterity += 2
-        return self._dexterity
 
 class Lightfoot(Barbarian):
-    def __init__(self, races):
-        super().__init__(races)
-    
-    def addAtribute(self):
+    def __init__(self, player_name: None, races: None)-> None:
+        super().__init__(player_name, races)
         self._charisma + 1
-        return self._charisma
 
 class Stout(Barbarian):
-    def __init__(self, races):
-        super().__init__(races)
-    
-    def addAtribute(self):
+    def __init__(self, player_name: None, races: None)-> None:
+        super().__init__(player_name, races)
         self._constitution + 1
-        return self._constitution

@@ -1,16 +1,8 @@
-#sistema random de pontos
-#raças são classes, em outro arquivo
-#atributos mudam com a raça
-#sistema de seleção de raças e sub-raças
-#tipos de atributos/print atributos ok
-#escolher raça não é aqui
-#procurar funcionalidades da lista
-#modo de printar CalcAtribute
-
 import random
 
 class Character:
-    def __init__(self, races)-> None:
+    def __init__(self, player_name: None, races: None)-> None:
+        self.player_name = player_name
         self.races = races
         self._type_strenght = {
             'Incorpóreo':[0],
@@ -66,37 +58,46 @@ class Character:
             'Influente':[16,17,18,19,20],
             'Ídolo':[21]
         }
-        self._strenght = random.randint(0,21)
-        self._dexterity = random.randint(0,21)
-        self._constitution = random.randint(0,21)
-        self._wisdom = random.randint(0,21)
-        self._intelligence = random.randint(0,21)
-        self._charisma = random.randint(0,21)
-    
+        self._strenght = random.randint(0,21) #Atributo força
+        self._dexterity = random.randint(0,21) #Atributo destreza
+        self._constitution = random.randint(0,21) #Atributo constituição
+        self._wisdom = random.randint(0,21) #Atributo sabedoria
+        self._intelligence = random.randint(0,21) #Atributo inteligência
+        self._charisma = random.randint(0,21) #Atributo carisma
+
     def __calcAtribute(self, value, dic)-> None:
         for x in dic:
             for y in dic[x]:
                 if value == y:
                     return x
     
-    def typeStrenght(self):
+    def typeStrenght(self)-> None:
         return self.__calcAtribute(self._strenght, self._type_strenght)
 
-    def typeDexterity(self):
+    def typeDexterity(self)-> None:
         return self.__calcAtribute(self._dexterity, self._type_decterity)
 
-    def typeConstitution(self):
+    def typeConstitution(self)-> None:
         return self.__calcAtribute(self._constitution, self._type_constitution)
 
-    def typeWisdom(self):
+    def typeWisdom(self)-> None:
         return self.__calcAtribute(self._wisdom, self._type_wisdom)
     
-    def typeIntelligence(self):
+    def typeIntelligence(self)-> None:
         return self.__calcAtribute(self._intelligence, self._type_intelligence)
     
-    def typeCharisma(self):
+    def typeCharisma(self)-> None:
         return self.__calcAtribute(self._charisma, self._type_charisma)
     
-#b = Character()
-
-#print(b.typeCharisma())
+    def __str__(self)-> None: #Printa Personagem
+        return (f'\n_________Sobre_________\n\n'
+            f'Nome do personagem: {self.player_name}\n'
+            f'Raça: {self.races}\n\n'
+            f'_________Atributos_________\n\n'
+            f'Força: {self._strenght} ({self.typeStrenght()})\n'
+            f'Destreza: {self._dexterity} ({self.typeDexterity()})\n'
+            f'Constituição: {self._constitution} ({self.typeConstitution()})\n'
+            f'Sabedoria: {self._wisdom} ({self.typeWisdom()})\n'
+            f'Inteligência: {self._intelligence} ({self.typeIntelligence()})\n'
+            f'Carisma: {self._charisma} ({self.typeCharisma()})\n\n'
+            )

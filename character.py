@@ -58,12 +58,12 @@ class Character:
             'Influente':[16,17,18,19,20],
             'Ídolo':[21]
         }
-        self._strenght = random.randint(0,21) #Atributo força
-        self._dexterity = random.randint(0,21) #Atributo destreza
-        self._constitution = random.randint(0,21) #Atributo constituição
-        self._wisdom = random.randint(0,21) #Atributo sabedoria
-        self._intelligence = random.randint(0,21) #Atributo inteligência
-        self._charisma = random.randint(0,21) #Atributo carisma
+        self._strenght = random.randint(0,21)
+        self._dexterity = random.randint(0,21)
+        self._constitution = random.randint(0,21)
+        self._wisdom = random.randint(0,21)
+        self._intelligence = random.randint(0,21)
+        self._charisma = random.randint(0,21)
 
     def __calcAtribute(self, value, dic)-> None:
         for x in dic:

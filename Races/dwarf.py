@@ -9,7 +9,7 @@ class Dwarf(Character):
         super().__init__(player_name, races)
         self._constitution += 2
     
-class HillDwarf(Character):
+class HillDwarf(Dwarf):
     def __init__(self, player_name: None, races: None)-> None:
         super().__init__(player_name, races)
         self._wisdom += 1
